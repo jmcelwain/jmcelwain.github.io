@@ -1,0 +1,10 @@
+baseurl = "http://jmcelwa.in"
+languageCode = "en-US"
+title = "James McElwain"
+theme = "code-editor"
+
+[params]
+    author = "James McElwain"
+    locale = "en-US"
+    # rootlink = "/"
+    # rootlink specifies where Root in menu.html links to. If it's not set then baseurl will be used.
