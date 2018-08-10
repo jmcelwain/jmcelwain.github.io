@@ -1,4 +1,4 @@
-baseurl = "http://jmcelwa.in"
+baseurl = "https://jmcelwa.in"
 languageCode = "en-US"
 title = "James McElwain"
 theme = "code-editor"
