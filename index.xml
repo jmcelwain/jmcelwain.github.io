@@ -29,14 +29,5 @@
       <description>Kubernetes vs Serverless We&amp;rsquo;ve been using Openshift, Red Hat&amp;rsquo;s &amp;ldquo;distribution&amp;rdquo; of Kubernetes, for over a year now. Although there are definitely pain points with learning an API with such a large surface area, in general my experience as an application developer has been really positive. Although our biggest gains were effects of moving off an old school Spring/Tomcat WAR deployment model to Docker and Spring Boot, Openshift itself is packaged really nicely and seems to have a lot of commitment from Red Hat.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://jmcelwa.in/posts/snd-virmidi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jmcelwa.in/posts/snd-virmidi/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

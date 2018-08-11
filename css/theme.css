@@ -1048,6 +1048,12 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: transparent; }
 
+code {
+    padding: 2px 4px 2px 4px;
+    color: #dccf8f;
+    background: #181914;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
