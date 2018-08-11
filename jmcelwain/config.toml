@@ -1,6 +1,6 @@
 baseurl = "https://jmcelwa.in"
 languageCode = "en-US"
-title = ""
+title = "Blog"
 theme = "code-editor"
 
 [params]
