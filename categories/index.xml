@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on James McElwain</title>
-    <link>http://jmcelwa.in/categories/</link>
-    <description>Recent content in Categories on James McElwain</description>
+    <title>Categories on </title>
+    <link>https://jmcelwa.in/categories/</link>
+    <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="http://jmcelwa.in/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jmcelwa.in/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Code</title>
-      <link>http://jmcelwa.in/categories/code/</link>
+      <link>https://jmcelwa.in/categories/code/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://jmcelwa.in/categories/code/</guid>
+      <guid>https://jmcelwa.in/categories/code/</guid>
       <description></description>
     </item>
     

@@ -1,6 +1,6 @@
 baseurl = "https://jmcelwa.in"
 languageCode = "en-US"
-title = "James McElwain"
+title = ""
 theme = "code-editor"
 
 [params]
