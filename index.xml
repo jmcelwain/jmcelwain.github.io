@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 10 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jmcelwa.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Restoring S3 Suspend to X1 Carbon (6th Gen) on Linux</title>
+      <link>https://jmcelwa.in/posts/x1c-acpi/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmcelwa.in/posts/x1c-acpi/</guid>
+      <description>My current laptop is the second in the X1 Carbon lineup I&amp;rsquo;ve owned. In general, it&amp;rsquo;s been painless running Linux. However, in this current iteration, I was surprised to find that suspend-to-ram functionality isn&amp;rsquo;t enabled in UEFI. Apparently, Lenovo is catering to a new Microsoft sleep state Windows Modern Standby that allows for devices to be more easily woken up when in deep sleep (think mobile phones). There&amp;rsquo;s a long thread on the Arch forums about this, and I was able to successfully follow this blog post in order to patch my system, with a few exceptions.</description>
+    </item>
     
     <item>
       <title>Jenkins X and Managed Kubernetes</title>
@@ -18,6 +27,15 @@
       
       <guid>https://jmcelwa.in/posts/jenkins-x/</guid>
       <description>Kubernetes vs Serverless We&amp;rsquo;ve been using Openshift, Red Hat&amp;rsquo;s &amp;ldquo;distribution&amp;rdquo; of Kubernetes, for over a year now. Although there are definitely pain points with learning an API with such a large surface area, in general my experience as an application developer has been really positive. Although our biggest gains were effects of moving off an old school Spring/Tomcat WAR deployment model to Docker and Spring Boot, Openshift itself is packaged really nicely and seems to have a lot of commitment from Red Hat.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jmcelwa.in/posts/snd-virmidi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmcelwa.in/posts/snd-virmidi/</guid>
+      <description></description>
     </item>
     
   </channel>

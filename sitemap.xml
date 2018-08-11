@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jmcelwa.in/posts/x1c-acpi/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jmcelwa.in/posts/jenkins-x/</loc>
     <lastmod>2018-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://jmcelwa.in/</loc>
-    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmcelwa.in/posts/snd-virmidi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jmcelwa.in/tags/arch/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -26,7 +41,7 @@
   
   <url>
     <loc>https://jmcelwa.in/categories/code/</loc>
-    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -49,6 +64,12 @@
   </url>
   
   <url>
+    <loc>https://jmcelwa.in/tags/linux/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jmcelwa.in/tags/openshift/</loc>
     <lastmod>2018-08-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -56,13 +77,13 @@
   
   <url>
     <loc>https://jmcelwa.in/posts/</loc>
-    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jmcelwa.in/tags/</loc>
-    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
