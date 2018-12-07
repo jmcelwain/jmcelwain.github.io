@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Blog</title>
+    <link>https://jmcelwa.in/tags/linux/</link>
+    <description>Recent content in Linux on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jmcelwa.in/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Restoring S3 Suspend to X1 Carbon (6th Gen) on Linux</title>
+      <link>https://jmcelwa.in/posts/x1c-acpi/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmcelwa.in/posts/x1c-acpi/</guid>
+      <description>My current laptop is the second in the X1 Carbon lineup I&amp;rsquo;ve owned. In general, it&amp;rsquo;s been painless running Linux. However, in this current iteration, I was surprised to find that suspend-to-ram functionality isn&amp;rsquo;t enabled in UEFI. Apparently, Lenovo is catering to a new Microsoft sleep state Windows Modern Standby that allows for devices to be more easily woken up when in deep sleep (think mobile phones). There&amp;rsquo;s a long thread on the Arch forums about this, and I was able to successfully follow this blog post in order to patch my system, with a few exceptions.</description>
+    </item>
+    
+  </channel>
+</rss>

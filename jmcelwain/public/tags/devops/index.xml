@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops on Blog</title>
+    <link>https://jmcelwa.in/tags/devops/</link>
+    <description>Recent content in Devops on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 10 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jmcelwa.in/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkins X and Managed Kubernetes</title>
+      <link>https://jmcelwa.in/posts/jenkins-x/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmcelwa.in/posts/jenkins-x/</guid>
+      <description>Kubernetes vs Serverless We&amp;rsquo;ve been using Openshift, Red Hat&amp;rsquo;s &amp;ldquo;distribution&amp;rdquo; of Kubernetes, for over a year now. Although there are definitely pain points with learning an API with such a large surface area, in general my experience as an application developer has been really positive. Although our biggest gains were effects of moving off an old school Spring/Tomcat WAR deployment model to Docker and Spring Boot, Openshift itself is packaged really nicely and seems to have a lot of commitment from Red Hat.</description>
+    </item>
+    
+  </channel>
+</rss>

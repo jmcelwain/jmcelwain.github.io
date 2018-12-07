@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on Blog</title>
+    <link>https://jmcelwa.in/tags/rust/</link>
+    <description>Recent content in Rust on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://jmcelwa.in/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Rust</title>
+      <link>https://jmcelwa.in/posts/learning-rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmcelwa.in/posts/learning-rust/</guid>
+      <description>Learning Rust as an Application Developer I don&amp;rsquo;t have a CS degree, and was never forced to sit through an operating systems class. I feel pretty comfortable reading C, and have used Linux as my daily driver for years, so I&amp;rsquo;m not a total novice when it comes to systems, but it&amp;rsquo;s definitely outside of my development experience, which has mainly been with Java and to a lesser extend JavaScript.</description>
+    </item>
+    
+  </channel>
+</rss>

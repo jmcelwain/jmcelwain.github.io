@@ -1,7 +1,7 @@
 +++
 tags = ["rust"]
 categories = ["code"]
-date = "2018-12-6
+date = "2018-12-6"
 title = "Learning Rust"
 +++
 
