@@ -1,6 +1,5 @@
 +++
 tags = ["devops", "ci/cd", "Kubernetes", "Openshift", "Jenkins X"]
-categories = ["code"]
 date = "2018-08-10"
 title = "Jenkins X and Managed Kubernetes"
 +++

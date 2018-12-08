@@ -1,7 +1,11 @@
 baseurl = "https://jmcelwa.in"
 languageCode = "en-US"
 title = "Blog"
-theme = "code-editor"
+theme = "hugo-theme-one"
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "pygments"
 
 [params]
     author = "James McElwain"

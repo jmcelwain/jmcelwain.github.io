@@ -1,6 +1,5 @@
 +++
-tags = ["linux", "arch"]
-categories = ["code"]
+tags = ["linux", "arch"] 
 title = "Restoring S3 Suspend to X1 Carbon (6th Gen) on Linux"
 date = "2018-08-11"
 +++
