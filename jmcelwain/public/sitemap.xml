@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jmcelwa.in/posts/raft-rust/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jmcelwa.in/posts/x1c-acpi/</loc>
     <lastmod>2018-08-11T00:00:00+00:00</lastmod>
   </url>
@@ -20,7 +25,7 @@
   
   <url>
     <loc>https://jmcelwa.in/</loc>
-    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -30,14 +35,8 @@
   </url>
   
   <url>
-    <loc>https://jmcelwa.in/tags/ci-cd/</loc>
+    <loc>https://jmcelwa.in/tags/ci/cd/</loc>
     <lastmod>2018-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmcelwa.in/categories/code/</loc>
-    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -54,13 +53,15 @@
   </url>
   
   <url>
-    <loc>https://jmcelwa.in/tags/kubernetes/</loc>
-    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <loc>https://jmcelwa.in/tags/kafka/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jmcelwa.in/posts/learning-rust/</loc>
+    <loc>https://jmcelwa.in/tags/kubernetes/</loc>
+    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -77,12 +78,19 @@
   
   <url>
     <loc>https://jmcelwa.in/posts/</loc>
-    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmcelwa.in/tags/raft/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jmcelwa.in/tags/rust/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
