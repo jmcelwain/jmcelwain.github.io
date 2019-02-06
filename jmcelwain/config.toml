@@ -1,7 +1,7 @@
 baseurl = "https://jmcelwa.in"
 languageCode = "en-US"
 title = "Blog"
-theme = "hugo-theme-one"
+theme = "code-editor"
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
