@@ -68,7 +68,7 @@ public StateMachine<States, Events> buildMachine() throws Exception {
 }
 ```
 
-Although this solves the problem of ensuring the state machine is logically sound, it still requires lots of boilerplate, and an annotation based meta-programming API that fully embodies Spring "magic".
+Although this solves the problem of ensuring the state machine is sound, it still requires lots of boilerplate, and an annotation based meta-programming API that fully embodies Spring "magic".
 
 ### Rust
 
@@ -171,4 +171,4 @@ In Rust, when a value is moved rather than borrowed from the calling scope, the 
 
 In Java, we might declare a method `Candidate from(Follower follower)` that would encode a similar transition. However, because Java lacks the strong ownership semantics of Rust, it's possible for us to commit a number of errors that do not violate the memory safety of Java, but represent serious defects in our program.
 
-Java programmers have to be vigilant not to let objects be "published" to other threads or scopes. In our example, if a reference has been published, the previous state will not be garbage collected
+Java programmers have to be vigilant not to let objects be "published" to other threads or scopes. In our example, if a reference has been published, the previous state will not be garbage collected.
