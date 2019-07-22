@@ -1,1 +1,15 @@
-<div>Under construction (learning Hugo...). Check back later!</div>
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ hugo.Generator }}
+    {{ partial "meta.html" . }}
+    {{ partial "favicon.html" . }}
+    {{ partial "highlightjs.html" }}
+    <title>{{ .Title }} / {{ .Site.Title }}</title>
+
+    {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
+    <link href="{{"css/index.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+  </head>
+  <body class="" data-url="{{ .RelPermalink }}">
