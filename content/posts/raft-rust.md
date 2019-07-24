@@ -43,7 +43,7 @@ class Raft {
     // ...
 }
 ```
-Such a pattern is largely imperative / procedural, and requires explicit validation at each transition to ensure that the state machine is not in an invalid state. While this pattern can be written in a way that ensures only valid transitions are made, it is error prone and,  more importantly, difficult to understand.
+Such a pattern is largely imperative / procedural, and requires explicit validation at each transition to ensure that the state machine is not in an invalid state. While this pattern can be written in a way that ensures only valid transitions are made, it is error prone and, more importantly, difficult to understand.
 
 Of course, it's possible to extract this validation logic into a generic builder patter. For example, from the [Spring Statemachine](https://projects.spring.io/spring-statemachine/) project:
 ```java
@@ -105,7 +105,7 @@ impl From<Raft<Follower>> for Raft<Candidate> {
 
 Before we implement `From` for any other states, the only transition that is allowed in our state machine is from `Follower` to `Candidate` in the form `let candidate: Raft<Candidate> = Raft::from(follower)`.
 
-Additionally, Rust's type system allows us to implement specific methods that only apply to a particular generic implementation:
+Additionally, Rust's type system allows us to implement specific methods that only apply to a particular variant:
 ```rust
 impl Struct<Candidate> {
     pub fn get_votes(&self) -> (votes, total) {
@@ -171,4 +171,6 @@ In Rust, when a value is moved rather than borrowed from the calling scope, the 
 
 In Java, we might declare a method `Candidate from(Follower follower)` that would encode a similar transition. However, because Java lacks the strong ownership semantics of Rust, it's possible for us to commit a number of errors that do not violate the memory safety of Java, but represent serious defects in our program.
 
-Java programmers have to be vigilant not to let objects be "published" to other threads or scopes. In our example, if a reference has been published, the previous state will not be garbage collected.
+Java programmers have to be vigilant not to let objects be published to other threads or scopes. In our example, if a reference has been published, nothing prevents an errant procedure from updating what is now shared state.
+
+While such an error can easily be prevented through viligant code review, the type system in Rust makes this whole process egronomic. More proof that static typing, when done right, is friendly and efficient.

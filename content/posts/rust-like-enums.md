@@ -1,7 +1,7 @@
 +++
 tags = ["rust", "kafka", "raft"]
 date = "2019-03-08"
-title = "Rust-like Enumes in TypeScript"
+title = "Rust-like Enums in TypeScript"
 +++
 
 One of the nicest things about Rust is handling nulls with `Option` and error states with `Result`. Because Rust has good pattern matching, handling these cases becomes trivial as the complier forces you to handle all the cases of an enum in a `match` expression.
@@ -79,7 +79,20 @@ This interface defines a single method which takes an object with two methods re
 
 Unfortunately, actually implementing this interface poses a few problems.
 
-First, we can try having each variant implement the interface directly. However, the type parameter `T` on the interface poses a problem for `None`: if the none or nil variant can never produce a value, it doesn't make sense to be parameterized over `T`. In truth, `None` needs implements `Matchable<never>`, because the user should never be able to get a `T` out of it -- we will always call the "none" handler in the match.
+First, we can try having each variant implement the interface directly:
+```typescript
+export interface Some<T> extends Matchable<T> {
+    tag: "some"
+    value: T
+}
+
+export interface None extends Matchable<never>{
+    tag: "none"
+}
+``` 
+
+
+However, the type parameter `T` on the interface poses a problem for `None`: if the none or nil variant can never produce a value, it doesn't make sense to be parameterized over `T`. In truth, `None` needs implements `Matchable<never>`, because the user should never be able to get a `T` out of it -- we will always call the "none" handler in the match.
 
 This is problematic. If each variant implements `Matchable` directly, TypeScript produces an error when trying to call `match` on an instance of `Option`:
 
@@ -88,24 +101,68 @@ let maybeNumber = Option.of(1)
 maybeNumber.match({
     some(num) {
         // ...
-    }
+    },
     none() {
         // ...
     }
 }) // <--- ERROR!
 ```
-```
+
+```sh
 [ts] Cannot invoke an expression whose type lacks a call signature. Type '(<E>(fns: { some: (t: never) => E; none: () => E; }) => E) | (<E>(fns: { some: (t: number) => E; none: () => E; }) => E)' has no compatible call signatures. [2349]
 ```
 
-We cannot call `match` because typescript does not know how to call it. The problem is with the method `some` in our `None` variant, which has the concrete signature `some<E>(val: never): E`. A method with a parameter that is `never` can never be called:
+We cannot call `match` because typescript does not know how to call it. More sepcifically, the implementation of `some` for the `None` variant has `never` in its signature, and a method with a parameter that is `never` can never be called.
+
+`never` is the "bottom" type, which means that it cannot be represented. It exists at the level of the type system and cannot have a concrete runtime value. Because a `never` cannot be instantiated, a function returning `never` is expected to diverge, i.e. never return, by throwing an exception or exiting.
+
+Using `never` as a paramater, like we're doing, is a bit more confusing. A function with a `never` parameter cannot be called, because it is impossible to provide a concerete instance of `never` with which to call the function.
+
+An uncallable function might not initially seem very useful, but in our case it ensures that the `None` variant can never produce a value. Because a function with the signature `some(t: never)` can never be called, this enfroces the invariant that the implementation for `None` can only call the `none` method.
+
+However, even though we cannot use the `some` method in the `None` implementation, when calling `match` via a reference to a `Some<T> | None`, TypeScript infers the type  `(Some<T> & Matchable<T>) | (None & Matchable<never>)`, or for purposes of our `match` method. In other words, we *could* be dealing with a `Matchable<never>`.
+
+Here's the solution to our problems:
 
 ```typescript
-type MaybeFn<T, E> = ((a: never) => E) | ((a: T) => E)
-let maybeThree: MaybeFn<any, number> = (_n: any) => 3
-
-maybeThree("foo")
-        // ~~~~~ Argument of type "foo" is not assignable to parameter of type 'never'. [2345]
+export type Option<T> = (Some<T> | None) & Matchable<T>
 ```
 
-`never` is the "bottom" type, which effectively means that it cannot be represented. We pass a concrete value as `never` and any function returning `never` is expected to diverge, i.e. never return, by throwing an exception or exiting.
+This exposes another weird thing about `never` -- it is assignable to any type. As the bottom type, `never` is a subtype of every type. I lack the type theory knowledge to fully understand the implications of this, but it presents some interesting behavior:
+
+
+```typescript
+let a: never
+let b: number
+let c: string
+
+b = c // Type 'string' is not assignable to type 'number'.ts(2322)
+b = a // Fine
+c = a // Fine
+```
+
+This assignment rule also applies to a parameterized interface:
+```typescript
+interface Matchable<T> {}
+let matchableNumber: Matchable<number> = {}
+let matchableNever: Matchable<never> = {}
+
+matchableNumber = matchableNever
+
+```
+
+In other words, even though our implementation for `None` implements `Matchable<never>`, because `Matchable<never>` is assignable to `Matchable<T>`, our `None` implementation satisfies the intersection `& Matchable<T>` for `Option`.
+
+Consequently, our `Option` type does what we'd expect:
+```typescript
+maybeNumber.match({
+    some(num) {
+        console.log(num) // Prints the number
+    },
+    none() {
+        console.log("none")
+    }
+})
+```
+
+Implementing a `Result` type is an excercise left to the reader, but works very similarly. The obvious downside to this approach in TypeScript is that we are manually implementing pattern matching for each enum type we want to create. We have to manually implement all the utility functions (map, filter, etc.) as well.
