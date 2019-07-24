@@ -1,5 +1,5 @@
 +++
-tags = ["rust", "kafka", "raft"]
+tags = ["rust", "typescript"]
 date = "2018-12-07"
 title = "A Raft State Machine in Rust"
 +++
